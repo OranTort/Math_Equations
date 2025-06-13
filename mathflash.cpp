@@ -20,7 +20,7 @@ int main(){
     num1 = rand() % 100 + 1;
     num2 = rand() % 100 + 1;
 
-        std::cout << "Select an equation(+ - / *): ";
+        std::cout << "Select a function(+ - / *): ";
         std::cin >> equation;
 
         if(equation == '*'){
@@ -68,7 +68,7 @@ int main(){
             }
             }while(result != answer);
         }
-        else{
+        else if(equation == '+'){
         std::cout << num1 << " " << '+' << " " << num2 << '\n';
         do{std::cin >> result;
         answer = num1 + num2;
@@ -82,6 +82,11 @@ int main(){
                 std::cout << "You are incorrect. Try again.\n";
             }
             }while(result != answer);
+        }
+        else{
+            std::cout << "Select an appropriate function(+ - * /)\n";
+            std::cout << "Do you want to continue(Y/N)?: \n";
+            std::cin >> cont;
         }
     }while(cont == 'Y' || cont == 'y');
     std::cout << "**********************************\n";
