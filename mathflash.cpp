@@ -2,14 +2,15 @@
 #include <vector>
 #include <cmath>
 #include <ctime>
+#include <iomanip>
 
 
 
 int main(){
-    double num1;
-    double num2;
-    double result;
-    double answer;
+    int num1;
+    int num2;
+    int result;
+    int answer;
     char equation;
     char cont; 
 
@@ -18,13 +19,13 @@ int main(){
     do{
     srand(time(0));
     num1 = rand() % 100 + 1;
-    num2 = rand() % 100 + 1;
+    num2 = rand() % 50 + 1;
 
         std::cout << "Select a function(+ - / *): ";
         std::cin >> equation;
 
         if(equation == '*'){
-        std::cout << num1 << " " << '*' << " " << num2 << '\n';
+        std::cout << num1 << " " << '*' << " " << num2 << "(Enter nearest whole number)" << '\n';
         do{std::cin >> result;
         answer = num1 * num2;
         
@@ -39,7 +40,7 @@ int main(){
             }while(result != answer);
         }
         else if(equation == '-'){
-        std::cout << num1 << " " << '-' << " " << num2 << '\n';
+        std::cout << num1 << " " << '-' << " " << num2 <<  "(Enter nearest whole number)" << '\n';
         do{std::cin >> result;
         answer = num1 - num2;
         
@@ -54,7 +55,7 @@ int main(){
             }while(result != answer);
         }
         else if(equation == '/'){
-        std::cout << num1 << " " << '/' << " " << num2 << '\n';
+        std::cout << num1 << " " << '/' << " " << num2 <<  "(Enter nearest whole number)" << '\n';
         do{std::cin >> result;
         answer = num1 / num2;
         
@@ -69,9 +70,10 @@ int main(){
             }while(result != answer);
         }
         else if(equation == '+'){
-        std::cout << num1 << " " << '+' << " " << num2 << '\n';
+        std::cout << num1 << " " << '+' << " " << num2 <<  "(Enter nearest whole number)" << '\n';
         do{std::cin >> result;
         answer = num1 + num2;
+        answer = round(answer);
         
             if(result == answer){
                 std::cout << "You are correct!\n";
