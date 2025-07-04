@@ -33,6 +33,7 @@ int main(){
                 std::cout << "You are correct!\n";
                 std::cout << "Do you want to continue(Y/N)?: \n";
                 std::cin >> cont;
+                cont = toupper(cont);
             }
             else{
                 std::cout << "You are incorrect. Try again.\n";
@@ -48,6 +49,7 @@ int main(){
                 std::cout << "You are correct!\n";
                 std::cout << "Do you want to continue(Y/N)?: \n";
                 std::cin >> cont;
+                cont = toupper(cont);
             }
             else{
                 std::cout << "You are incorrect. Try again.\n";
@@ -63,6 +65,7 @@ int main(){
                 std::cout << "You are correct!\n";
                 std::cout << "Do you want to continue(Y/N)?: \n";
                 std::cin >> cont;
+                cont = toupper(cont);
             }
             else{
                 std::cout << "You are incorrect. Try again.\n";
@@ -79,6 +82,7 @@ int main(){
                 std::cout << "You are correct!\n";
                 std::cout << "Do you want to continue(Y/N)?: \n";
                 std::cin >> cont;
+                cont = toupper(cont);
             }
             else{
                 std::cout << "You are incorrect. Try again.\n";
@@ -89,8 +93,9 @@ int main(){
             std::cout << "Select an appropriate function(+ - * /)\n";
             std::cout << "Do you want to continue(Y/N)?: \n";
             std::cin >> cont;
+            cont = toupper(cont);
         }
-    }while(cont == 'Y' || cont == 'y');
+    }while(cont == 'Y');
     std::cout << "**********************************\n";
 
     return 0;
